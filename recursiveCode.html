@@ -1,0 +1,30 @@
+<html>
+	<head>
+	</head>
+	
+	<body>
+		<div>
+			<img id = "img"/>
+		</div>
+		
+		<script type = "text/javascript">
+		var changeInterval = 5000;
+		var index = 0;
+		
+		var imageArray = new Array();
+		imageArray[0] = "pics/pic0.jpg";
+		imageArray[1] = "pics/pic1.jpg";
+		imageArray[2] = "pics/pic2.jpg";
+		imageArray[3] = "pics/pic3.jpg";
+		
+		function changeAd() {
+			document.getElementById('img').src = imageArray[index];
+			index++;
+			if (index == imageArray.length) { index = 0; }
+			setTimeout("changeAd()", changeInterval);
+		}
+		
+		changeAd();
+		</script>
+	</body>
+</html>
